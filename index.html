@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+    <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/3/free-icon-romantic-dinner-9004.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: grid;
+            place-items: stretch;
+        }
+
+        nav {
+            background-color: white;
+            height: 3.5vw;
+            display: flex;
+        }
+
+        .nav-bar {
+            justify-content: flex-start;
+            margin: 5px;
+            text-align: center;
+            font-size: xx-large;
+            letter-spacing: 2px;
+        }
+
+        /* Change width separtely for child components in nav bar */
+        #home {
+            width: 350px;
+            align-self: center;
+        }
+
+        #order {
+            width: 120px;
+            align-self: center;
+
+        }
+
+        #food {
+            width: 120px;
+            align-self: center;
+        }
+
+        #res {
+            width: 200px;
+            align-self: center;
+        }
+
+        #test {
+            width: 190px;
+            align-self: center;
+        }
+
+        #cont {
+            width: 335px;
+            align-self: center;
+        }
+
+        .body {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* That z-index things */
+        .inside-text {
+            background-color: rgb(236, 127, 132);
+            opacity: .8;
+            width: 670px;
+            height: 250px;
+            position: absolute;
+            z-index: 1;
+            align-self: center;
+            margin-top: 280px;
+            margin-right: 670px;
+        }
+
+        h1 {
+            color: white;
+            opacity: 2;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            margin-left: 30px;
+            margin-top: 35px;
+        }
+
+        #text {
+            color: white;
+            opacity: 1;
+            font-family: system-ui;
+            font-size: large;
+            font-weight: 100;
+            margin: 10px;
+            margin-left: 40px;
+            width: 300px;
+        }
+
+        /* Order now page */
+        .second-page {
+            display: flex;
+            flex-flow: column;
+            background: linear-gradient(to right, #ff3399 0%, #ffcc00 100%);
+        }
+
+        h2 {
+            letter-spacing: 4px;
+            text-align: center;
+            color: white;
+            font-family: system-ui;
+            font-size: 50px;
+            width: 100%;
+
+        }
+
+        /* Order button */
+        .order-btn {
+            padding-left: 46%;
+        }
+
+        button {
+            color: black;
+            background-color: #f9ccac;
+            width: 160px;
+            height: 60px;
+            border-radius: 50px;
+            font-weight: bolder;
+            font-size: x-large;
+            border-color: transparent;
+        }
+
+        #inner-sec-page {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .food {
+            background-color: white;
+            width: 300px;
+            height: 400px;
+            margin: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .img-food {
+
+            border-top-right-radius: 50px;
+
+        }
+
+        h3 {
+            background-color: white;
+            text-align: center;
+            font-family: system-ui;
+            font-size: large;
+            letter-spacing: 1px;
+        }
+
+        .img-div {
+            width: 250px;
+            height: 250px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .img-para {
+            background-color: white;
+            width: 200px;
+            margin-left: 25px;
+            margin-top: -10px;
+            font-family: system-ui;
+            font-size: medium;
+            font-weight: lighter;
+            text-align: justify;
+        }
+
+        /* Media queries: */
+        @media (min-width:300px) and (max-width: 768px) {
+            /* For mobile phones and tablets: */
+            body {
+                background-color: dodgerblue;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                height: 22px;
+                background-color: white;
+                display: flex;
+            }
+
+            .nav-bar {
+                background-color: white;
+                width: 5px;
+                margin: .5px;
+                height: 20px;
+                font-size: x-small;
+                align-self: center;
+            }
+
+            #home {
+                width: 50px;
+            }
+
+            #order {
+                width: 55px;
+            }
+
+            #food {
+                width: 55px;
+            }
+
+            #res {
+                width: 70px;
+
+            }
+
+            #test {
+                margin-left: .5px;
+                width: 75px;
+            }
+
+            #cont {
+                width: 70px;
+            }
+
+            #call-icon {
+                width: 20px;
+                margin: 10px;
+            }
+
+            #trolley-icon {
+                width: 20px;
+                margin: 10px;
+            }
+
+            .inside-text {
+                width: 230px;
+                height: 250px;
+                left: 40px;
+                top: -250px;
+            }
+
+            h1 {
+                font-size: medium;
+            }
+
+            #text {
+                text-align: left;
+                width: 120px;
+                text-align: justify;
+                font-size: smaller;
+            }
+
+            .body {
+                width: 100%;
+            }
+
+            .second-page {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+            }
+
+            #inner-sec-page {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+        }
+
+        @media (min-width:769) and (max-width:992px) {
+            /* For laptops */
+            body {
+                background-color: dodgerblue;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This is nav bar -->
+    <div class="nav">  
+        <nav>
+            <span id="home" class="nav-bar">Home</span>
+            <span id="order" class="nav-bar">Order</span>
+            <span id="food" class="nav-bar">Food</span>
+            <span id="res" class="nav-bar">Restaruant</span>
+            <span id="test" class="nav-bar">Testimonials</span>
+            <span id="cont" class="nav-bar">Contact Us</span>
+            <img src="https://www.iconpacks.net/icons/3/free-icon-phone-5969.png" alt="whatsapp-icon" id="call-icon"
+                class="nav-bar">
+            <img src="https://www.iconpacks.net/icons/3/free-icon-black-shopping-cart-10933.png" alt="trolley-icon"
+                id="trolley-icon" class="nav-bar">
+        </nav>
+    </div>
+
+    <!-- This is centre image part with z-index things -->
+    <div class="body">
+        <img src="https://res.cloudinary.com/dbdmiqwst/image/upload/v1693123469/img1_r6t4rq.jpg" alt="full-meals"
+            style="max-width:100%;height:auto; " id="body-img">
+        <div class="inside-text">
+            <h1>LOREM IPSUM</h1>
+            <p id="text">Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took
+                a galley of type and scrambled it to make a type
+                specimen book.</p>
+        </div>
+    </div>
+
+    <!-- This is color radiant part -->
+    <div class="second-page">
+        <h2>Order Now</h2>
+        <div id="inner-sec-page">
+            <div class="food">
+                <div class="img-div">
+                    <img src="https://res.cloudinary.com/dbdmiqwst/image/upload/v1693133222/img4_wwjxic.jpg"
+                        alt="burger" class="img-food" style="max-width:100%; " id="burger" height="250" width="250">
+                </div>
+                <h3>BURGER</h3>
+                <p class="img-para">Lorem Ipsum has been the industry's standard dummy</p>
+            </div>
+            <div class="food">
+                <div class="img-div">
+                    <img class="img-food"
+                        src="https://res.cloudinary.com/dbdmiqwst/image/upload/e_improve:outdoor/img2_gsab9y.jpg"
+                        style="max-width:100%;" id="pizza" height="250" width="250">
+                </div>
+                <h3>PIZZA</h3>
+                <p class="img-para">Lorem Ipsum has been the industry's standard dummy</p>
+            </div>
+            <div class="food">
+                <div class="img-div">
+                    <img class="img-food"
+                        src="https://res.cloudinary.com/dbdmiqwst/image/upload/v1693134401/img3_rybnd6.jpg"
+                        style="max-width:100%;" id="pasta" height="250" width="250">
+                </div>
+                <h3>PASTA</h3>
+                <p class="img-para">Lorem Ipsum has been the industry's standard dummy</p>
+            </div>
+        </div>
+        <div class="order-btn">
+            <button>Order</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
